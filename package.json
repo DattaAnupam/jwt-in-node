@@ -1,0 +1,26 @@
+{
+  "name": "jwt-in-node",
+  "version": "1.0.0",
+  "description": "This is a sample app which is using jwt authentication",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DattaAnupam/jwt-in-node.git"
+  },
+  "keywords": [
+    "jwt",
+    "node.js",
+    "js",
+    "authentication",
+    "express"
+  ],
+  "author": "Anupam Datta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DattaAnupam/jwt-in-node/issues"
+  },
+  "homepage": "https://github.com/DattaAnupam/jwt-in-node#readme"
+}
