@@ -27,10 +27,12 @@ APP.get('/posts', (req, res) => {
     if(result == undefined || result.length == 0) {
         res.set('content-type', 'application/json')
             .status(404)
-            .send(JSON.stringify({message: 'No post found'}));
+            .send({message: 'No post found'});
     }
 
-    res.send({"title": result[0].title, "content": result[0].content});
+    else {
+        res.send({"title": result[0].title, "content": result[0].content});
+    }
 })
 
 APP.post('/getToken', (req, res) => {
