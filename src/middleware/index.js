@@ -9,7 +9,7 @@ import jwt from 'jsonwebtoken';
  * @param {Function} next - The next middleware function.
  * @returns {Object} - The response object or calls the next middleware.
  */
-const authenticateToken = (req, res, next) => {
+export const authenticateToken = (req, res, next) => {
     // get the token from the request header
     const authHeader = req.headers['authorization'];
     const token = authHeader && authHeader.split(' ')[1];
@@ -32,4 +32,3 @@ const authenticateToken = (req, res, next) => {
     })
 };
 
-export default authenticateToken;

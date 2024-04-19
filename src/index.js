@@ -2,7 +2,7 @@ import express from 'express';
 import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
 
-import authenticateToken from './middleware/index.js';
+import {authenticateToken} from './middleware/index.js';
 
 dotenv.config();
 const APP = express();
