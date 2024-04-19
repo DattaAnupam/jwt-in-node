@@ -24,8 +24,13 @@ APP.use(express.json());
 
 APP.get('/posts', (req, res) => {
     const result = posts.filter(post => post.user === req.body.username);
-    res.setHeader('content-type', 'application/json');
-    res.send(JSON.stringify({"title": result[0].title, "content": result[0].content}));
+    if(result == undefined || result.length == 0) {
+        res.set('content-type', 'application/json')
+            .status(404)
+            .send(JSON.stringify({message: 'No post found'}));
+    }
+
+    res.send({"title": result[0].title, "content": result[0].content});
 })
 
 APP.post('/getToken', (req, res) => {
