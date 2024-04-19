@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1713524983509" clover="3.2.0">
-  <project timestamp="1713524983509" name="All files">
+<coverage generated="1713525562176" clover="3.2.0">
+  <project timestamp="1713525562176" name="All files">
     <metrics statements="10" coveredstatements="7" conditionals="6" coveredconditionals="4" methods="2" coveredmethods="2" elements="18" coveredelements="13" complexity="0" loc="10" ncloc="10" packages="1" files="1" classes="1"/>
     <file name="index.js" path="C:\Users\aanup\OneDrive\Desktop\Learning\NodeJs\jwt-implementation\jwt-in-node\src\middleware\index.js">
       <metrics statements="10" coveredstatements="7" conditionals="6" coveredconditionals="4" methods="2" coveredmethods="2"/>
