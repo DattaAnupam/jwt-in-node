@@ -7,11 +7,13 @@ const APP = express();
 const PORT = process.env.PORT || 3000;
 const posts = [
     {
+        user: 'Anupam',
         title: 'First post',
         date: new Date(),
         content: 'This is the first post'
     },
     {
+        user: 'Anupam Datta',
         title: 'Second post',
         date: new Date(),
         content: 'This is the second post'
@@ -19,10 +21,11 @@ const posts = [
 ]
 
 APP.use(express.json());
-APP.get('/posts', (_, res, next) => {
-    res.send(posts);
 
-    next();
+APP.get('/posts', (req, res) => {
+    const result = posts.filter(post => post.user === req.body.username);
+    res.setHeader('content-type', 'application/json');
+    res.send(JSON.stringify({"title": result[0].title, "content": result[0].content}));
 })
 
 APP.post('/getToken', (req, res) => {
