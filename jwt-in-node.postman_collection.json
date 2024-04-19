@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "80296f95-451a-4d03-85d5-a92cb5489d89",
+		"name": "jwt-in-node",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13131700"
+	},
+	"item": [
+		{
+			"name": "get posts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQW51cGFtIiwiaWF0IjoxNzEzNTIwNTMxfQ.jjCI1FFAcbFNkhJRC5teneCAeiXWrnt4xOVySZp6RJQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Anupam Datta\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/posts",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Access Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Anupam\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/getToken",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getToken"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
